@@ -1,0 +1,55 @@
+{
+  "name": "@mhdd_24/netextender-mcp",
+  "version": "1.0.2",
+  "description": "MCP server for SonicWall NetExtender VPN connect, disconnect, and status via nxcli",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "netextender-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "docs/WIKI.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "prepack": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sonicwall",
+    "netextender",
+    "vpn",
+    "cursor"
+  ],
+  "author": "Mhdd-24",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mhdd-24/NetExtender-MCP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mhdd-24/NetExtender-MCP/issues"
+  },
+  "homepage": "https://github.com/Mhdd-24/NetExtender-MCP#readme",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
